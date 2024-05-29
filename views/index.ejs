@@ -1,0 +1,31 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facturas</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Facturas</h1>
+  <form action="/search" method="get">
+    <input type="text" name="q" placeholder="Buscar factura">
+    <button type="submit">Buscar</button>
+    <button type="button" onclick="window.location.href='/list-all'">Listar Todas</button>
+  </form>
+  </form>
+  <a href="/new-factura">Agregar Nueva Factura</a>
+  <div class="image-container">
+    <% facturas.forEach(factura => { %>
+      <div class="image-item">
+        <strong>Título:</strong> <%= factura.title %> <br>
+        <strong>Fecha:</strong> <%= factura.date %> <br>
+        <strong>Categoría:</strong> <%= factura.category %> <br>
+        <img src="<%= factura.imageUrl %>" class="img-fluid">
+        <!-- <a href="<%= factura.imageUrl %>" target="_blank">Ver Imagen</a> -->
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>

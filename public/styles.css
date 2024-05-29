@@ -1,0 +1,82 @@
+/* public/styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #E0EAFC; 
+  background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos para organizar las imágenes en columnas */
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-item {
+  flex: 0 0 calc(50% - 20px); /* Dos columnas con margen entre ellas */
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+  .image-item {
+    flex: 0 0 calc(33.33% - 20px); /* Tres columnas con margen entre ellas */
+  }
+}
+
+h1 {
+  color: #333;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"], input[type="date"], select {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+a {
+  color: #007BFF;
+}
+
+a:hover {
+  text-decoration: none;
+}

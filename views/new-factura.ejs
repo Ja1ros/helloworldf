@@ -1,0 +1,39 @@
+<!-- views/new-factura.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nueva Factura</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Agregar Nueva Factura</h1>
+  <form action="/new-factura" method="post" enctype="multipart/form-data">
+    <div>
+      <label for="title">Título:</label>
+      <input type="text" name="title" required>
+    </div>
+    <div>
+      <label for="date">Fecha:</label>
+      <input type="date" name="date" required>
+    </div>
+    <div>
+      <label for="category">Categoría:</label>
+      <select name="category" required>
+        <option value="Alimentos">Alimentos</option>
+        <option value="Servicios">Servicios</option>
+        <option value="Alimentos">General</option>
+        <option value="Bancos">Bancos</option>
+        <option value="Pagos">Pagos</option>
+      </select>
+    </div>
+    <div>
+      <label for="file">Imagen:</label>
+      <input type="file" name="file" accept="image/*" required>
+    </div>
+    <button type="submit">Guardar</button>
+  </form>
+  <a href="/">Volver a Facturas</a>
+</body>
+</html>
